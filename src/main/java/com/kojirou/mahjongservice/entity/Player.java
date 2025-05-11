@@ -1,16 +1,12 @@
+// src/main/java/com/kojirou/mahjongservice/entity/Player.java
 package com.kojirou.mahjongservice.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.hibernate.annotations.GenericGenerator;
+import lombok.*;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.time.Instant;
 import java.util.UUID;
-
 
 @Entity
 @Table(name = "players")
@@ -23,6 +19,7 @@ public class Player {
     @Id
     @GeneratedValue(generator = "UUID")
     @UuidGenerator
+    @Column(columnDefinition = "UUID", updatable = false, nullable = false)
     private UUID id;
 
     @Column(nullable = false)
@@ -31,9 +28,4 @@ public class Player {
     @Column(name = "created_at", nullable = false, updatable = false)
     private Instant createdAt = Instant.now();
 
-    @OneToMany(mappedBy = "player")
-    private List<Score> scores;
-
-    @OneToMany(mappedBy = "player")
-    private List<Ranking> rankings;
 }
