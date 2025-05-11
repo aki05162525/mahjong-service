@@ -13,5 +13,23 @@ Content-Type: application/json
 GET http://localhost:8080/api/v1/players/99ef7fdb-fc15-46e6-a0fb-a8760ce5e82f
 
 ### プレイヤー削除
-DELETE  http://localhost:8080/api/v1/players/99ef7fdb-fc15-46e6-a0fb-a8760ce5e82f
+DELETE  http://localhost:8080/api/v1/players/3821cd5a-de7c-4706-a1c2-79c152e427f5
 
+
+
+### 全リーグ取得
+GET http://localhost:8080/api/v1/leagues
+
+###リーグ作成
+POST http://localhost:8080/api/v1/leagues
+Content-Type: application/json
+
+{
+  "name": "小次郎麻雀大会"
+}
+
+### 一つのリーグ取得
+GET http://localhost:8080/api/v1/leagues/d15f4a35-96c9-43e6-a0b4-b95454472132
+
+###リーグ削除
+DELETE http://localhost:8080/api/v1/leagues/d15f4a35-96c9-43e6-a0b4-b95454472132
