@@ -33,3 +33,37 @@ GET http://localhost:8080/api/v1/leagues/d15f4a35-96c9-43e6-a0b4-b95454472132
 
 ###リーグ削除
 DELETE http://localhost:8080/api/v1/leagues/d15f4a35-96c9-43e6-a0b4-b95454472132
+
+
+
+### 試合作成
+POST http://localhost:8080/api/v1/leagues/359eec6f-03a6-46b3-bc5c-cd9ca2c87e0a/matches
+Content-Type: application/json
+
+{
+  "matchNumber": 1,
+  "ruleType": "INITIAL"
+}
+
+###
+
+### リーグ内の試合一覧取得
+GET http://localhost:8080/api/v1/leagues/359eec6f-03a6-46b3-bc5c-cd9ca2c87e0a/matches
+
+###
+
+### 試合更新
+PUT http://localhost:8080/api/v1/leagues/359eec6f-03a6-46b3-bc5c-cd9ca2c87e0a/matches/884caec9-3e50-48ed-999b-2c63786ae7a3
+Content-Type: application/json
+
+{
+  "matchNumber": 2,
+  "ruleType": "UPPER"
+}
+
+###
+
+### 試合削除
+DELETE http://localhost:8080/api/v1/leagues/359eec6f-03a6-46b3-bc5c-cd9ca2c87e0a/matches/884caec9-3e50-48ed-999b-2c63786ae7a3
+
+
