@@ -8,7 +8,7 @@ import java.time.Instant;
 import java.util.UUID;
 
 @Entity
-@Table(name = "mathces")
+@Table(name = "matches")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
